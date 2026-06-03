@@ -4,10 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Termales El Guayacán — Centro Recreativo y Ecológico en Fortuna de Bagaces, Guanacaste, Costa Rica. 10 piscinas termales naturales del Volcán Miravalles. Abrimos 8am a 9pm todos los días.">
+  <meta name="theme-color" content="#0F5132">
+  <link rel="canonical" href="https://www.termalesguayacan.com/">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Termales El Guayacán | Centro Recreativo y Ecológico">
   <meta property="og:description" content="10 piscinas de aguas termales volcánicas naturales, canopy, senderos y hospedaje en las faldas del Volcán Miravalles, Guanacaste, Costa Rica.">
-  <meta property="og:image" content="logo.png">
+  <meta property="og:image" content="https://www.termalesguayacan.com/logo.png">
+  <meta property="og:url" content="https://www.termalesguayacan.com/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Termales El Guayacán">
+  <meta property="og:locale" content="es_CR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Termales El Guayacán | Centro Recreativo y Ecológico">
+  <meta name="twitter:description" content="10 piscinas de aguas termales volcánicas naturales del Volcán Miravalles, en Guanacaste, Costa Rica.">
+  <meta name="twitter:image" content="https://www.termalesguayacan.com/logo.png">
+
   <title>Termales El Guayacán | Centro Recreativo y Ecológico</title>
   <link rel="icon" type="image/png" href="logo.png">
 
@@ -20,8 +35,75 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- =====================================================
+       DATOS ESTRUCTURADOS (Schema.org JSON-LD)
+       ⚠️ VERIFICAR: reemplazá latitude/longitude por las coordenadas
+       EXACTAS de tu Google Business Profile (Maps → clic derecho en el
+       pin → copiar coordenadas). Los valores actuales son aproximados.
+  ===================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    "@id": "https://www.termalesguayacan.com/#resort",
+    "name": "Termales El Guayacán",
+    "alternateName": "Centro Recreativo y Ecológico El Guayacán",
+    "description": "Centro Recreativo y Ecológico en las faldas del Volcán Miravalles, Guanacaste, Costa Rica. 10 piscinas termales de aguas volcánicas naturales sin cloro + 2 de agua fría, canopy, senderos, hospedaje y restaurante.",
+    "url": "https://www.termalesguayacan.com/",
+    "logo": "https://www.termalesguayacan.com/logo.png",
+    "image": "https://www.termalesguayacan.com/logo.png",
+    "telephone": "+506 2673-0349",
+    "email": "hotelelguayacan@gmail.com",
+    "priceRange": "₡₡",
+    "currenciesAccepted": "CRC",
+    "paymentAccepted": "Efectivo, Tarjeta",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5 km al noroeste de Fortuna de Bagaces, faldas del Volcán Miravalles",
+      "addressLocality": "Fortuna de Bagaces",
+      "addressRegion": "Guanacaste",
+      "addressCountry": "CR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "10.69860",
+      "longitude": "-85.15320"
+    },
+    "hasMap": "https://maps.google.com/maps?q=Termales+El+Guayacan+Fortuna+de+Bagaces+Costa+Rica",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "21:00"
+    }],
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "10 piscinas termales sin cloro", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "2 piscinas de agua fría", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Canopy / Tirolesa 250m", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Restaurante & Bar", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "WiFi gratuito", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Parqueo gratuito", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Acceso para movilidad reducida", "value": true }
+    ],
+    "makesOffer": {
+      "@type": "Offer",
+      "name": "Pase del Día — Adultos",
+      "price": "5000",
+      "priceCurrency": "CRC",
+      "description": "Acceso a piscinas termales, tobogán, miradores, ranchos, puente colgante, tour de hornillas de lodo y senderos. Incluye IVA."
+    },
+    "sameAs": [
+      "https://www.instagram.com/termaleselguayacan/",
+      "https://www.facebook.com/CentroRecreativoyEcologicoElGuayacan"
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Skip link — accesibilidad por teclado -->
+  <a href="#inicio" class="skip-link" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
 
   <!-- =====================================================
        NAVBAR
@@ -82,9 +164,9 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow"
-         data-es="Fortuna de Bagaces · Guanacaste · Costa Rica"
-         data-en="Fortuna de Bagaces · Guanacaste · Costa Rica">
-        Fortuna de Bagaces · Guanacaste · Costa Rica
+         data-es="Fortuna de Bagaces, Guanacaste · 96% nos recomienda"
+         data-en="Fortuna de Bagaces, Guanacaste · 96% would recommend">
+        Fortuna de Bagaces, Guanacaste · 96% nos recomienda
       </p>
       <h1 class="hero-title">
         <span class="hero-line1" data-es="Donde el Volcán" data-en="Where the Volcano">Donde el Volcán</span>
@@ -95,9 +177,10 @@
          data-en="10 thermal pools + 2 cold water pools. Natural volcanic water, chlorine-free, on the slopes of Volcán Miravalles.">
         10 piscinas termales + 2 de agua fría. Aguas volcánicas naturales sin cloro, en las faldas del Volcán Miravalles.
       </p>
+      <span class="open-status" id="openStatus" aria-live="polite"></span>
       <div class="hero-ctas">
         <a href="#piscinas" class="btn-primary"
-           data-es="Conocer más" data-en="Discover More">Conocer más</a>
+           data-es="Ver las piscinas" data-en="See the pools">Ver las piscinas</a>
         <a href="https://wa.me/50688492812?text=Hola%2C%20me%20interesa%20información%20sobre%20Termales%20El%20Guayacán"
            class="btn-outline" target="_blank" rel="noopener"
            data-es="Reservar por WhatsApp" data-en="Book via WhatsApp">Reservar por WhatsApp</a>
@@ -313,9 +396,9 @@
         <span class="section-eyebrow" data-es="Quédate con nosotros" data-en="Stay with us">Quédate con nosotros</span>
         <h2 data-es="Hospedaje" data-en="Lodging">Hospedaje</h2>
         <p class="section-intro"
-           data-es="Despertá en medio del bosque tropical con el Volcán Miravalles como vista. Ofrecemos habitaciones y villas privadas — todo incluido con desayuno y acceso completo a las instalaciones."
-           data-en="Wake up in the middle of the tropical forest with Volcán Miravalles as your view. We offer rooms and private villas — all inclusive with breakfast and full access to facilities.">
-          Despertá en medio del bosque tropical con el Volcán Miravalles como vista. Ofrecemos habitaciones y villas privadas — todo incluido con desayuno y acceso completo a las instalaciones.
+           data-es="Despertá en medio del bosque tropical con el Volcán Miravalles como vista. Ofrecemos habitaciones y villas privadas con desayuno y acceso completo a las instalaciones incluidos."
+           data-en="Wake up in the middle of the tropical forest with Volcán Miravalles as your view. We offer rooms and private villas with breakfast and full access to all facilities included.">
+          Despertá en medio del bosque tropical con el Volcán Miravalles como vista. Ofrecemos habitaciones y villas privadas con desayuno y acceso completo a las instalaciones incluidos.
         </p>
       </div>
 
@@ -511,6 +594,24 @@
   </section>
 
   <!-- =====================================================
+       OPINIONES / TESTIMONIOS
+  ===================================================== -->
+  <section class="section testimonios-section" id="opiniones">
+    <div class="container">
+      <p class="reviews-eyebrow" data-aos="fade-up"
+         data-es="Reseñas reales de Google" data-en="Real Google reviews">Reseñas reales de Google</p>
+      <div class="section-header text-center" data-aos="fade-up">
+        <h2 data-es="Lo que dicen nuestros visitantes" data-en="What our visitors say">Lo que dicen nuestros visitantes</h2>
+      </div>
+
+      <!-- Widget de reseñas de Google (Featurable) — el script está al final del body -->
+      <div data-aos="fade-up">
+        <div id="featurable-ad122b03-c322-4758-8b33-d8fdd08db3e1" data-featurable-async></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
        PRECIOS
   ===================================================== -->
   <section class="section precios-section" id="precios">
@@ -574,7 +675,7 @@
           <div class="precio-header">
             <span class="precio-icon" aria-hidden="true">🏡</span>
             <h3 data-es="Hospedaje" data-en="Lodging">Hospedaje</h3>
-            <span class="precio-badge" data-es="Todo incluido" data-en="All Inclusive">Todo incluido</span>
+            <span class="precio-badge" data-es="Con desayuno" data-en="Breakfast Included">Con desayuno</span>
           </div>
           <div class="precio-rows">
             <div class="precio-row">
@@ -781,6 +882,108 @@
   </section>
 
   <!-- =====================================================
+       PREGUNTAS FRECUENTES
+  ===================================================== -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <span class="section-eyebrow" data-es="¿Tenés dudas?" data-en="Have questions?">¿Tenés dudas?</span>
+        <h2 data-es="Preguntas frecuentes" data-en="Frequently asked questions">Preguntas frecuentes</h2>
+      </div>
+
+      <div class="faq-list" data-aos="fade-up">
+        <details class="faq-item">
+          <summary data-es="¿Necesito reservar para el pase del día?"
+                   data-en="Do I need a reservation for the day pass?">¿Necesito reservar para el pase del día?</summary>
+          <div class="faq-answer">
+            <p data-es="No. El pase del día no requiere reserva: llegás directamente en nuestro horario de 8:00am a 9:00pm, todos los días. Para hospedaje sí te recomendamos consultar disponibilidad por WhatsApp."
+               data-en="No. The day pass requires no reservation — just arrive within our hours of 8:00am to 9:00pm, every day. For lodging, we do recommend checking availability via WhatsApp.">
+              No. El pase del día no requiere reserva: llegás directamente en nuestro horario de 8:00am a 9:00pm, todos los días. Para hospedaje sí te recomendamos consultar disponibilidad por WhatsApp.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary data-es="¿Puedo llevar mi propia comida y bebida?"
+                   data-en="Can I bring my own food and drinks?">¿Puedo llevar mi propia comida y bebida?</summary>
+          <div class="faq-answer">
+            <p data-es="Sí, sin costo adicional. Contamos con más de 30 ranchos, muchos con parrilla de carbón para que cocines. La única restricción es que no se permiten envases de vidrio."
+               data-en="Yes, at no extra charge. We have over 30 ranchos, many with a charcoal grill so you can cook. The only restriction: glass containers are not allowed.">
+              Sí, sin costo adicional. Contamos con más de 30 ranchos, muchos con parrilla de carbón para que cocines. La única restricción es que no se permiten envases de vidrio.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary data-es="¿Qué incluye el pase del día?"
+                   data-en="What does the day pass include?">¿Qué incluye el pase del día?</summary>
+          <div class="faq-answer">
+            <p data-es="Acceso a las piscinas termales y de agua fría, tobogán, miradores, +30 ranchos, puente colgante, tour de hornillas de lodo, baños de arcilla y senderos naturales, además de WiFi y electricidad."
+               data-en="Access to the thermal and cold-water pools, water slide, viewpoints, 30+ ranchos, hanging bridge, mud fumaroles tour, clay baths and nature trails, plus WiFi and electricity.">
+              Acceso a las piscinas termales y de agua fría, tobogán, miradores, +30 ranchos, puente colgante, tour de hornillas de lodo, baños de arcilla y senderos naturales, además de WiFi y electricidad.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary data-es="¿El agua de las piscinas tiene cloro?"
+                   data-en="Does the pool water contain chlorine?">¿El agua de las piscinas tiene cloro?</summary>
+          <div class="faq-answer">
+            <p data-es="No. Son aguas volcánicas carbonatadas y mineralizadas que emergen del Volcán Miravalles. Los minerales naturales mantienen el agua limpia y saludable sin necesidad de químicos."
+               data-en="No. These are carbonated, mineral-rich volcanic waters that emerge from Volcán Miravalles. The natural minerals keep the water clean and healthy without any chemicals.">
+              No. Son aguas volcánicas carbonatadas y mineralizadas que emergen del Volcán Miravalles. Los minerales naturales mantienen el agua limpia y saludable sin necesidad de químicos.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary data-es="¿Es apto para niños y adultos mayores?"
+                   data-en="Is it suitable for children and seniors?">¿Es apto para niños y adultos mayores?</summary>
+          <div class="faq-answer">
+            <p data-es="Sí. Hay piscinas con profundidades desde 75 cm, ideales para toda la familia. Niños de 3 a 10 años y adultos mayores tienen tarifa reducida (₡4.000), y los menores de 3 años entran gratis. Contamos con acceso para personas con movilidad reducida."
+               data-en="Yes. Some pools are as shallow as 75 cm, ideal for the whole family. Children 3–10 and seniors pay a reduced rate (₡4,000), and under-3s enter free. We offer access for people with reduced mobility.">
+              Sí. Hay piscinas con profundidades desde 75 cm, ideales para toda la familia. Niños de 3 a 10 años y adultos mayores tienen tarifa reducida (₡4.000), y los menores de 3 años entran gratis. Contamos con acceso para personas con movilidad reducida.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary data-es="¿Hay parqueo? ¿Tiene costo?"
+                   data-en="Is there parking? Is it free?">¿Hay parqueo? ¿Tiene costo?</summary>
+          <div class="faq-answer">
+            <p data-es="Sí, contamos con amplio parqueo totalmente gratuito."
+               data-en="Yes, we have ample parking, completely free of charge.">
+              Sí, contamos con amplio parqueo totalmente gratuito.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary data-es="¿El hospedaje incluye acceso a las piscinas?"
+                   data-en="Does lodging include access to the pools?">¿El hospedaje incluye acceso a las piscinas?</summary>
+          <div class="faq-answer">
+            <p data-es="Sí. El hospedaje incluye desayuno y uso completo de todas las instalaciones, incluyendo las piscinas termales. También ofrecemos tarifas para agentes de viaje y corporativas — consultanos por WhatsApp."
+               data-en="Yes. Lodging includes breakfast and full use of all facilities, including the thermal pools. We also offer travel agent and corporate rates — just ask us via WhatsApp.">
+              Sí. El hospedaje incluye desayuno y uso completo de todas las instalaciones, incluyendo las piscinas termales. También ofrecemos tarifas para agentes de viaje y corporativas — consultanos por WhatsApp.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary data-es="¿Dónde están y cómo llego?"
+                   data-en="Where are you and how do I get there?">¿Dónde están y cómo llego?</summary>
+          <div class="faq-answer">
+            <p data-es="Estamos a 5 km al noroeste de Fortuna de Bagaces, en las faldas del Volcán Miravalles, Guanacaste. Desde Liberia son aproximadamente 1 hora. Mirá el mapa y las instrucciones en la sección «Cómo llegar»."
+               data-en="We're 5 km northwest of Fortuna de Bagaces, on the slopes of Volcán Miravalles, Guanacaste. It's about 1 hour from Liberia. See the map and directions in the “How to get here” section.">
+              Estamos a 5 km al noroeste de Fortuna de Bagaces, en las faldas del Volcán Miravalles, Guanacaste. Desde Liberia son aproximadamente 1 hora. Mirá el mapa y las instrucciones en la sección «Cómo llegar».
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
        CONTACTO
   ===================================================== -->
   <section class="section contacto-section" id="contacto">
@@ -911,5 +1114,8 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Featurable — widget de reseñas de Google -->
+  <script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
 </body>
 </html>

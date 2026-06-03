@@ -7,12 +7,16 @@
 (function () {
   'use strict';
 
+  /* ─── Reduced motion preference ────────────────────── */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ─── AOS init ─────────────────────────────────────── */
   AOS.init({
     duration: 700,
     once: true,
     offset: 60,
     easing: 'ease-out-cubic',
+    disable: prefersReducedMotion,
   });
 
   /* ─── Elements ─────────────────────────────────────── */
@@ -50,6 +54,16 @@
   langToggle.addEventListener('click', () => {
     applyLanguage(currentLang === 'es' ? 'en' : 'es');
   });
+
+  /* ─── Estado "Abierto ahora / Cerrado" (8am–9pm) ────── */
+  const openStatus = document.getElementById('openStatus');
+  if (openStatus) {
+    const hour = new Date().getHours();
+    const isOpen = hour >= 8 && hour < 21;
+    openStatus.classList.add(isOpen ? 'is-open' : 'is-closed');
+    openStatus.setAttribute('data-es', isOpen ? '● Abierto ahora · 8am–9pm' : '● Cerrado ahora · Abrimos 8am');
+    openStatus.setAttribute('data-en', isOpen ? '● Open now · 8am–9pm' : '● Closed now · We open at 8am');
+  }
 
   // Apply on page load (respects saved preference)
   applyLanguage(currentLang);
@@ -115,7 +129,7 @@
       const target = document.querySelector(this.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
     });
   });
 
