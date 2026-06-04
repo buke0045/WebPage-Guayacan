@@ -1,0 +1,253 @@
+/* =====================================================
+   TERMALES EL GUAYACÁN — termal-wellness-v2
+   Arquitectura: BENTO / mosaico modular · MOBILE-FIRST
+   Paleta: arena · salvia · turquesa · terracota
+   ===================================================== */
+
+:root {
+  --sand:      #F4EEE3;
+  --cream:     #FBF8F2;
+  --sage:      #7C8B6F;
+  --sage-deep: #4F5E47;
+  --sage-soft: #E4E8DC;
+  --water:     #4E9C93;
+  --water-l:   #7FBFB5;
+  --terra:     #C57B57;
+  --ink:       #2E332B;
+  --muted:     #6E7468;
+  --white:     #FFFFFF;
+  --whatsapp:  #25D366;
+
+  --serif: 'Newsreader', Georgia, serif;
+  --sans:  'Mulish', system-ui, sans-serif;
+  --maxw: 1180px;
+  --r: 22px;
+  --gap: 1rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body.theme-bento {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.12; color: var(--sage-deep); letter-spacing: -0.01em; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 4vw, 2rem); }
+.center { text-align: center; margin-top: 2rem; }
+.sec-head { margin-bottom: 1.75rem; }
+.sec-head h2 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); }
+.kicker { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terra); margin-bottom: 0.6rem; }
+
+/* Botones */
+.btn-primary, .btn-soft, .btn-light, .btn-nav {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--sans); font-weight: 700; font-size: 0.92rem;
+  padding: 0.85rem 1.8rem; border-radius: 999px; cursor: pointer;
+  transition: transform 0.35s var(--ease), background-color 0.3s ease, color 0.3s ease;
+  border: 1.5px solid transparent; text-align: center;
+}
+.btn-primary { background: var(--sage-deep); color: var(--cream); }
+.btn-primary:hover { background: var(--sage); transform: translateY(-2px); }
+.btn-soft { background: transparent; border-color: var(--sage); color: var(--sage-deep); }
+.btn-soft:hover { background: var(--sage-soft); transform: translateY(-2px); }
+.btn-soft.light { border-color: rgba(255,255,255,0.5); color: #fff; }
+.btn-soft.light:hover { background: rgba(255,255,255,0.12); }
+.btn-light { background: var(--cream); color: var(--sage-deep); }
+.btn-light:hover { transform: translateY(-2px); }
+.btn-nav { background: var(--sage-deep); color: var(--cream); padding: 0.55rem 1.3rem; font-size: 0.85rem; }
+.btn-full { display: flex; width: 100%; margin-top: auto; }
+.btn-big { padding: 1.05rem 2.3rem; font-size: 1.02rem; margin-top: 0.5rem; }
+
+/* Accesibilidad */
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 3000; padding: 0.75rem 1.25rem; background: var(--sage-deep); color: #fff; border-radius: 999px; font-weight: 700; transition: top 0.2s; }
+.skip-link:focus { top: 1rem; }
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--water); outline-offset: 3px; border-radius: 10px; }
+
+/* Placeholders */
+.img-placeholder { position: relative; overflow: hidden; background: radial-gradient(130% 130% at 25% 15%, rgba(127,191,181,0.4), transparent 55%), linear-gradient(135deg, #d9ddca, #cfdbcf 55%, #bcd3cd); display: flex; align-items: center; justify-content: center; }
+.placeholder-label { font-size: 0.78rem; color: rgba(46,51,43,0.5); text-align: center; padding: 1.25rem; max-width: 85%; font-style: italic; }
+
+/* =====================================================
+   NAV (pill)
+   ===================================================== */
+.navbar { position: fixed; inset: 0.75rem 0 auto 0; z-index: 1000; padding: 0 1rem; display: flex; justify-content: center; }
+.nav-pill { width: 100%; max-width: var(--maxw); background: rgba(251,248,242,0.85); backdrop-filter: blur(14px); border: 1px solid rgba(79,94,71,0.12); border-radius: 999px; padding: 0.5rem 0.6rem 0.5rem 1.1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; box-shadow: 0 10px 30px -20px rgba(79,94,71,0.5); }
+.navbar.scrolled .nav-pill { background: rgba(251,248,242,0.95); }
+.nav-logo img { height: 38px; }
+.nav-links { display: none; gap: 1.5rem; }
+.nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--sage-deep); opacity: 0.85; }
+.nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--terra); }
+.nav-actions { display: flex; align-items: center; gap: 0.6rem; }
+.lang-toggle { background: transparent; border: 1.5px solid rgba(79,94,71,0.25); color: var(--sage-deep); border-radius: 999px; width: 40px; height: 32px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
+.hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+.hamburger span { width: 22px; height: 2px; background: var(--sage-deep); border-radius: 2px; transition: 0.3s var(--ease); }
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.btn-nav { display: none; }
+.mobile-menu { display: none; position: fixed; inset: 0; z-index: 1500; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem; opacity: 0; transition: opacity 0.35s var(--ease); }
+.mobile-menu.open { opacity: 1; }
+.mobile-menu ul { display: flex; flex-direction: column; gap: 1.1rem; text-align: center; }
+.mobile-menu a { font-family: var(--serif); font-size: 1.8rem; color: var(--sage-deep); }
+
+/* =====================================================
+   BENTO (base)
+   ===================================================== */
+.bento { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
+.tile { background: var(--white); border-radius: var(--r); padding: 1.75rem; box-shadow: 0 16px 40px -32px rgba(79,94,71,0.5); }
+.tile.img-placeholder { padding: 0; min-height: 220px; }
+
+/* Hero bento — primer viewport */
+.bento-hero { margin-top: 4.5rem; }
+.tile-title { display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; }
+.tile-title .eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--terra); }
+.tile-title h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 300; margin: 0.4rem 0; }
+.tile-title .lede { color: var(--muted); }
+.tile-ctas { display: flex; gap: 0.75rem; margin-top: 1rem; flex-wrap: wrap; }
+.tile-img { min-height: 240px; }
+.tile-img2 { min-height: 180px; }
+.tile-stat { display: flex; flex-direction: column; justify-content: center; color: #fff; }
+.tile-stat b { font-family: var(--serif); font-size: 3rem; line-height: 1; }
+.tile-stat span { margin-top: 0.4rem; font-size: 0.9rem; opacity: 0.9; }
+.c-sage { background: var(--sage); color: #fff; } .c-sage h2, .c-sage h3 { color: #fff; }
+.c-water { background: var(--water); color: #fff; }
+.c-deep { background: var(--sage-deep); color: var(--sand); } .c-deep h2, .c-deep h3 { color: #fff; }
+.tile-open { display: flex; flex-direction: column; justify-content: center; gap: 0.4rem; background: var(--sage-soft); }
+.tile-open .open-status { font-weight: 700; color: var(--sage-deep); }
+.tile-open .open-status.is-closed { color: var(--terra); }
+.tile-open-sub { font-size: 0.85rem; color: var(--muted); }
+
+/* Feature tile (texto largo) */
+.tile-feature { display: flex; flex-direction: column; justify-content: center; }
+.tile-feature h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 0.5rem 0 1rem; }
+.tile-feature p { opacity: 0.92; }
+
+/* Features bento */
+.tile-soft .ico { font-size: 1.9rem; display: inline-flex; width: 56px; height: 56px; align-items: center; justify-content: center; background: var(--sage-soft); border-radius: 16px; margin-bottom: 0.9rem; }
+.tile-soft h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+.tile-soft p { color: var(--muted); font-size: 0.92rem; }
+
+/* Experiencias tiles */
+.tile-exp { padding: 0; overflow: hidden; }
+.tile-exp-media { aspect-ratio: 16/10; }
+.tile-exp-body { padding: 1.25rem 1.5rem 1.6rem; }
+.tile-exp-body h3 { font-size: 1.35rem; margin-bottom: 0.4rem; }
+.tile-exp-body p { color: var(--muted); font-size: 0.93rem; }
+
+/* Hospedaje tiles */
+.tile-lodge { padding: 0; overflow: hidden; }
+.tile-lodge.featured { outline: 2px solid var(--water-l); }
+.tile-lodge-media { aspect-ratio: 16/10; }
+.tile-lodge-body { padding: 1.5rem; }
+.tile-lodge-body h3 { font-size: 1.5rem; margin-bottom: 0.6rem; }
+.pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--water); background: rgba(127,191,181,0.18); border-radius: 999px; padding: 0.3rem 0.9rem; margin-bottom: 0.7rem; }
+.amenities { display: grid; gap: 0.5rem; }
+.amenities li { position: relative; padding-left: 1.6rem; color: var(--muted); font-size: 0.92rem; }
+.amenities li::before { content: '✓'; position: absolute; left: 0; color: var(--water); font-weight: 700; }
+
+/* Precios tiles */
+.tile-price { display: flex; flex-direction: column; }
+.tile-price.featured { outline: 2px solid var(--water-l); }
+.tile-price h3 { font-size: 1.6rem; margin-bottom: 1.2rem; }
+.price-rows { display: grid; gap: 0.7rem; padding-bottom: 1rem; border-bottom: 1px solid var(--sand); }
+.price-rows > div { display: flex; justify-content: space-between; align-items: baseline; }
+.price-rows span { color: var(--muted); }
+.price-rows b { font-family: var(--serif); font-size: 1.35rem; color: var(--sage-deep); }
+.note { font-size: 0.85rem; color: var(--terra); font-weight: 600; margin: 0.9rem 0; }
+.incl { font-size: 0.9rem; color: var(--muted); margin: 1rem 0 1.5rem; }
+
+/* Reseñas */
+.tile-reviews { padding: clamp(1rem, 3vw, 2rem); }
+
+/* Galería bento */
+.bento-gallery { grid-auto-rows: 180px; }
+.bento-gallery .tile { padding: 0; min-height: 0; }
+
+/* FAQ */
+.faq-list { display: grid; gap: 0.85rem; }
+.faq-item { background: var(--white); border-radius: 16px; box-shadow: 0 10px 30px -26px rgba(79,94,71,0.5); overflow: hidden; }
+.faq-item summary { cursor: pointer; padding: 1.2rem 1.5rem; font-weight: 700; color: var(--sage-deep); list-style: none; display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.5rem; color: var(--terra); transition: transform 0.3s var(--ease); }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-answer { padding: 0 1.5rem 1.3rem; color: var(--muted); }
+
+/* Cómo llegar */
+.tile-map { padding: 0; overflow: hidden; }
+.tile-map iframe { display: block; }
+.tile-steps { display: flex; flex-direction: column; }
+.tile-steps .step { display: flex; gap: 0.9rem; margin-bottom: 1.1rem; }
+.tile-steps .step span { flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%; background: rgba(255,255,255,0.18); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.tile-steps .step p { color: rgba(244,238,227,0.92); }
+.tile-steps .btn-soft { margin-top: auto; align-self: flex-start; }
+
+/* Contacto */
+.tile-contact { text-align: center; padding: clamp(2.5rem, 6vw, 4rem); }
+.tile-contact h2 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
+.tile-contact p { opacity: 0.92; max-width: 50ch; margin: 0.75rem auto 0; }
+.contacto-rows { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.contacto-rows a, .contacto-rows > span { display: flex; flex-direction: column; gap: 0.2rem; color: #fff; font-weight: 700; }
+.contacto-rows span span, .contacto-rows > span span { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
+
+/* Footer */
+.footer { text-align: center; color: var(--muted); }
+.footer-logo { height: 52px; margin: 0 auto 1rem; }
+.footer-social { display: flex; gap: 1.25rem; justify-content: center; margin: 1rem 0; }
+.footer-social a { color: var(--water); font-weight: 700; }
+.social-links { display: flex; gap: 1rem; justify-content: center; }
+.copy { font-size: 0.82rem; margin-top: 1rem; }
+
+/* WhatsApp FAB */
+.whatsapp-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 900; width: 56px; height: 56px; border-radius: 50%; background: var(--whatsapp); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 14px 30px rgba(37,211,102,0.4); transition: transform 0.3s var(--ease); }
+.whatsapp-fab:hover { transform: scale(1.08); }
+
+/* =====================================================
+   TABLET / DESKTOP — el bento toma forma
+   ===================================================== */
+@media (min-width: 720px) {
+  .nav-links { display: flex; }
+  .btn-nav { display: inline-flex; }
+  .hamburger { display: none; }
+  :root { --gap: 1.25rem; }
+
+  .bento-hero { grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(150px, auto); }
+  .tile-title { grid-column: span 2; grid-row: span 2; }
+  .tile-img { grid-column: span 2; grid-row: span 2; }
+  .tile-stat, .tile-open { grid-column: span 1; }
+  .tile-img2 { grid-column: span 1; grid-row: span 1; }
+
+  .bento-2 { grid-template-columns: 1fr 1fr; }
+  .bento-feat { grid-template-columns: repeat(4, 1fr); }
+  .bento-exp { grid-template-columns: repeat(2, 1fr); }
+  .tile-exp.big { grid-column: span 2; }
+  .tile-exp.big { display: grid; grid-template-columns: 1.1fr 1fr; }
+  .tile-exp.big .tile-exp-media { aspect-ratio: auto; height: 100%; min-height: 220px; }
+  .tile-exp.big .tile-exp-body { display: flex; flex-direction: column; justify-content: center; }
+
+  .bento-gallery { grid-template-columns: repeat(4, 1fr); }
+  .g-big { grid-column: span 2; grid-row: span 2; }
+  .g-wide { grid-column: span 2; }
+
+  .contacto-rows { flex-direction: row; justify-content: center; gap: 2.5rem; }
+  .tile-map iframe { height: 100%; min-height: 380px; }
+  .tile-map { display: flex; }
+}
+
+@media (min-width: 1024px) {
+  .bento-feat { grid-template-columns: repeat(4, 1fr); }
+  .tile-feature { grid-column: span 1; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Versiones de diseño en preview — no indexar
+Disallow: /1/
+Disallow: /2/
+Disallow: /3/
+Disallow: /4/
+Disallow: /5/
+Disallow: /6/
+Disallow: /versiones/
+
 Sitemap: https://www.termalesguayacan.com/sitemap.xml
