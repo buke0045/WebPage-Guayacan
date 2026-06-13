@@ -58,10 +58,7 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 
   const menuClose = document.getElementById('menuClose');
-  if (menuClose) menuClose.addEventListener('click', closeMenu);
-
-  const menuClose = document.getElementById('menuClose');
-  if (menuClose) menuClose.addEventListener('click', closeMenu);
+  if (menuClose) menuClose.addEventListener('click', closeDrawer);
   }
 
   /* ─── Smooth scroll ─── */
