@@ -186,7 +186,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 
 /* Cómo llegar */
 .map-grid { display: grid; gap: 1.5rem; }
-.map-embed iframe { border-radius: var(--r); display: block; }
+.map-embed iframe { border-radius: var(--r); display: block; width: 100%; height: 350px; }
 .step { display: flex; gap: 0.9rem; margin-bottom: 1.1rem; }
 .step span { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-family: var(--display); }
 .step p { color: var(--muted); }
