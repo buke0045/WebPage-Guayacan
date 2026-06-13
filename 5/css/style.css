@@ -97,7 +97,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .mobile-menu { display: none; position: fixed; inset: 0; z-index: 1500; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem; opacity: 0; transition: opacity 0.35s var(--ease); }
 .mobile-menu.open { opacity: 1; }
 .mobile-menu ul { display: flex; flex-direction: column; gap: 1.1rem; text-align: center; }
-.mobile-menu a { font-family: var(--serif); font-size: 1.8rem; color: var(--sage-deep); }
+.mobile-menu ul a { font-family: var(--serif); font-size: 1.8rem; color: var(--sage-deep); }
 
 /* =====================================================
    BENTO (base)

@@ -11,7 +11,7 @@
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ─── AOS init ─────────────────────────────────────── */
-  AOS.init({
+  if (window.AOS) AOS.init({
     duration: 700,
     once: true,
     offset: 60,
