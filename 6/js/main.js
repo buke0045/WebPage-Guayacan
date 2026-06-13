@@ -56,6 +56,12 @@
     hamburger.addEventListener('click', () => drawer.classList.contains('open') ? closeDrawer() : openDrawer());
     drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+  const menuClose = document.getElementById('menuClose');
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+  const menuClose = document.getElementById('menuClose');
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
   }
 
   /* ─── Smooth scroll ─── */

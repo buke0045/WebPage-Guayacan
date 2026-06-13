@@ -104,6 +104,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .mobile-menu { display: none; position: fixed; inset: 0; z-index: 999; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 2rem; opacity: 0; transition: opacity 0.35s var(--ease-2); }
 .mobile-menu.open { opacity: 1; }
 .mobile-menu ul { display: flex; flex-direction: column; gap: 1.25rem; text-align: center; }
+.menu-close { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: none; font-size: 2rem; line-height: 1; cursor: pointer; padding: 8px; opacity: 0.6; color: inherit; }
+.menu-close:hover { opacity: 1; }
 .mobile-menu ul a { font-family: var(--display); font-size: 2rem; font-weight: 700; }
 
 /* =====================================================

@@ -406,6 +406,8 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: var(--space-md);
 }
+.menu-close { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: none; font-size: 2rem; line-height: 1; cursor: pointer; padding: 8px; opacity: 0.6; color: inherit; }
+.menu-close:hover { opacity: 1; }
 
 .mobile-menu ul a {
   color: var(--color-white);

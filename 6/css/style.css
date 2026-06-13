@@ -80,7 +80,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 /* =====================================================
    TOPBAR
    ===================================================== */
-.topbar { position: fixed; inset: 0 0 auto 0; height: var(--topbar-h); z-index: 1000; background: rgba(255,249,238,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0 1rem; }
+.topbar { position: fixed; inset: 0 0 auto 0; height: var(--topbar-h); z-index: 2000; background: rgba(255,249,238,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; padding: 0 1rem; }
 .topbar .nav-logo img { height: 38px; }
 .topnav { display: none; gap: 1.5rem; }
 .topnav a { font-weight: 600; font-size: 0.92rem; color: var(--ink); }
@@ -97,6 +97,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 .mobile-menu { position: fixed; inset: 0; z-index: 1500; background: var(--cream); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; opacity: 0; pointer-events: none; transition: opacity 0.35s var(--ease-2); }
 .mobile-menu.open { opacity: 1; pointer-events: auto; }
 .mobile-menu ul { display: flex; flex-direction: column; gap: 1.1rem; text-align: center; }
+.menu-close { position: absolute; top: 1.2rem; right: 1.2rem; background: none; border: none; font-size: 2rem; line-height: 1; cursor: pointer; padding: 8px; opacity: 0.6; color: inherit; }
+.menu-close:hover { opacity: 1; }
 .mobile-menu a { font-family: var(--display); font-size: 1.9rem; font-weight: 700; }
 
 /* =====================================================

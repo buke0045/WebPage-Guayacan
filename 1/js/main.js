@@ -123,6 +123,9 @@
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
   });
 
+  const menuClose = document.getElementById('menuClose');
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
+
   /* ─── Smooth scroll for all internal anchor links ───── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
